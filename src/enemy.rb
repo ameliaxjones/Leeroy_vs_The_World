@@ -7,3 +7,5 @@ class Enemy < Leeroy
         @name = name
     end
 end
+
+hp = 100

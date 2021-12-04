@@ -8,3 +8,5 @@ class Leeroy
         @run = run
     end
 end
+
+hp = 90
