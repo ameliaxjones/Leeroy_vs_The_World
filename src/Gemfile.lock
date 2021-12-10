@@ -1,29 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    cinch (2.3.4)
-    cinch-cooldown (1.2.1)
-      cinch (~> 2)
-      time-lord (~> 1.0, >= 1.0.1)
-    cinch-dicebag (1.0.15)
-      cinch (~> 2)
-      cinch-cooldown (~> 1.1, >= 1.1.5)
-      cinch-storage (~> 1.1)
-      cinch-toolbox (~> 1.1)
-    cinch-storage (1.2.1)
-      cinch (~> 2, >= 2.0.8)
-      psych (~> 2.0, >= 2.0.4)
-    cinch-toolbox (1.1.7)
-      nokogiri (~> 1.6)
-    mini_portile2 (2.6.1)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
-      racc (~> 1.4)
+    games_dice (0.4.0)
+      parslet (>= 1.5.0)
+    parslet (2.0.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    psych (2.2.4)
-    racc (1.6.0)
-    time-lord (1.0.1)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-prompt (0.23.1)
@@ -40,7 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cinch-dicebag
+  games_dice
   tty-prompt
 
 BUNDLED WITH

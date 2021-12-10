@@ -1,4 +1,5 @@
 require "tty-prompt"
+require 'games_dice'
 
 
 #Title
@@ -27,7 +28,7 @@ puts "
 #menu
 
 
-def select_option 
+def main_menu
     prompt = TTY::Prompt.new
     prompt.select("Main Menu") do |menu|
         menu.choice "New Game"
@@ -35,7 +36,7 @@ def select_option
         menu.choice "Exit"
     end
 end
-select_option
+main_menu
 # system "clear"
 # option = ""
 # while option != "Exit"

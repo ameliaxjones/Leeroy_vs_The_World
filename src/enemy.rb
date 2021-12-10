@@ -1,6 +1,6 @@
-require_relative("./leeroy.rb")
+require_relative("./player.rb")
 
-class Enemy < Leeroy
+class Enemy < Player
     def initialize(name, hp, attack)
         super(attack)
         super(hp)
