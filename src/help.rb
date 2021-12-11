@@ -1,10 +1,14 @@
 require_relative './battle'
+require 'tty-prompt'
+require 'tty-font'
 
-def help
-    puts "How To Play"
+
+def help_text
+    pastel = Pastel.new
+    font = TTY::Font.new(:doom)
+    puts pastel.red(font.write("How To Play"))
     page_break
-    puts "How to play!
-    First choose what menu option you would like to use 
+   puts" First choose what menu option you would like to use 
     - New Game: will start the game 
     - Help: will bring you to the Help page (which you are already in)
     - Exit: will close the app"
@@ -16,4 +20,3 @@ def help
     puts "First player to lose all hp will lose."
 end
 
-help
