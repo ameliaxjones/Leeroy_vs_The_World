@@ -1,11 +1,11 @@
 require_relative("./player.rb")
+require 'games_dice'
 
 class Enemy < Player
-    def initialize(name, hp, attack)
-        super(attack)
-        super(hp)
+    attr_reader :name
+    def initialize(hp, dice, name)
+        super(hp, dice)
         @name = name
     end
 end
 
-hp = 100

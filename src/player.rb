@@ -1,18 +1,15 @@
 require 'games_dice'
 
 class Player 
-    def initialize (hp, attack,name)
+    attr_reader :hp
+    def initialize (hp,dice)
         @hp = hp
-        @attack = attack
-        @name = name
+        @dice = dice
+
     end
     def attack
-        dice = GamesDice.create @attack
-        dice.roll
-    end
-    def stun
-        puts "Stun"
-        return true 
+        dice = GamesDice.create @dice
+        @hp -= dice.roll
     end
     def run
         puts "run away!"
@@ -20,12 +17,5 @@ class Player
     end
 end
 
-hp = 90
+#player = Player.new(50, "1d8")
 
-player = Player.new(90, "1d6", "Leeroy")
-
-
-
-puts player.attack
-puts player.stun
-puts player.run

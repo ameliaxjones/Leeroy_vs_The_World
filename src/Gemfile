@@ -10,3 +10,5 @@ gem "tty-prompt"
 gem 'games_dice'
 gem 'tty-font'
 gem 'colorize'
+gem 'rspec'
+gem "pastel"
