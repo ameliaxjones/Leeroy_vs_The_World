@@ -27,4 +27,19 @@ puts pastel.red(font.write("Leeroy    vs   The   World!"))
 page_break
 main_menu
 
-
+#Loop for the menu
+while answer != "Exit"
+    answer = select_option
+    system "clear"
+    case answer
+    when "New game!"
+        mode = game_mode
+        battle_story(battle)
+    when "Help"
+        training
+    else
+        puts "See you next time"
+        next
+    end 
+    system "clear"
+end
