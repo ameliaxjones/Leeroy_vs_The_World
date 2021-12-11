@@ -1,5 +1,6 @@
 require_relative '../player'
 require_relative '../enemy'
+require_relative '../battle'
 
 RSpec.describe Player, "Testing attack" do
     it "player dealing damage " do 

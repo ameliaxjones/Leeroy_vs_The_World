@@ -1,12 +1,14 @@
+#requiring classes and gems
+require_relative './player'
+require_relative './enemy'
+require_relative './battle'
+require_relative './dice'
 require 'tty-prompt'
 require 'games_dice'
 require 'tty-font'
 font = TTY::Font.new(:doom)
 pastel = Pastel.new
 
-
-#Title
-puts pastel.red(font.write("Leeroy    vs   The   World!"))
 
 #menu
 def main_menu
@@ -17,33 +19,12 @@ def main_menu
         menu.choice "Exit"
     end
 end
+
+
+#Title
+puts pastel.red(font.write("Leeroy    vs   The   World!"))
+
+page_break
 main_menu
-# system "clear"
-# option = ""
-# while option != "Exit"
-#     #invokes the menu and stores the option in the variable
-#     option = select_option
-#     #case statement to handle the options of the menu
-#     case option
-#         when "Ladder"
-#             $league.print_ladder
-#         when "Team's info"
-#             team = select_team
-#             team.full_info
-#         when "Play game"
-#             home = select_team
-#             away = select_team
-#             mode = select_game_mode
-#             play_game(home, away, mode)
-#             #puts "Play game"
-#         when "Train"
-#             team = select_team
-#             team.train
-#         else
-#             puts "See you next time..."
-#             next
-#     end
-#     print "Press Enter key to continue..."
-#     gets
-#     system "clear"
-# end
+
+
