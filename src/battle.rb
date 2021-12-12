@@ -6,7 +6,7 @@ require 'colorize'
 
 pastel = Pastel.new
 
-
+#menu for battle options
 def battle_menu
     prompt = TTY::Prompt.new
     prompt.select("Which will you choose?") do |menu|
@@ -15,11 +15,12 @@ def battle_menu
     end
 end
 
+#method for page breaks to make blocks of text look neat
 def page_break
     puts ""
 end
 
-
+# Body of text for story
 def opening_story
 
     puts "It was a warm summers day and Leeroy the sausage dog was sniffing the kitchen floor for pieces of food his hoomans might have dropped. He sauntered past the open kitchen door when suddenly movement in his peripherals made him stop in his tracks. His tail went into shark mode as his fur began to prickle, outside on his lawn he spotted a trespasser. A lizard, sunbaking in the grass! How dare it!"
@@ -36,10 +37,11 @@ end
 
 
 
+
 #page_break
 #battle_story
 #page_break
 #battle_menu
 
-opening_story
+#opening_story
 

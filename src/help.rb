@@ -1,8 +1,8 @@
-require_relative './battle'
+#require_relative './battle'
 require 'tty-prompt'
 require 'tty-font'
 
-
+# body of text for how to play game
 def help_text
     pastel = Pastel.new
     font = TTY::Font.new(:doom)
@@ -19,4 +19,5 @@ def help_text
     page_break
     puts "First player to lose all hp will lose."
 end
+
 

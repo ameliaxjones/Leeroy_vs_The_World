@@ -17,3 +17,9 @@ RSpec.describe Enemy, "Testing attack" do
         expect(enemy.hp).to be < 100 
     end
 end
+
+RSpec.describe Enemy, "Testing dice" do
+    it "is the dice giving an outcome" do 
+        enemy = Enemy.new(100, "1d8", "Name")
+        enemy.attack
+        expect(enemy.hp).to be < 100 
