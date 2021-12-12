@@ -10,7 +10,7 @@ class Player
 
     def attack
         dice = GamesDice.create @dice
-        @hp -= dice.roll
+        return dice.roll
     end
 
     def run
@@ -18,11 +18,9 @@ class Player
         return true
     end
 
-    def hp
-        
-
+    def take_damage(i)
+        @hp -= i
     end
-
     
 end
 

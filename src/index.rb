@@ -38,8 +38,21 @@ while answer != "Exit"
     system "clear"
     case answer
     when "New Game!"
-        opening_story
-        battle_menu
+        player = Player.new(50, "1d10") #created player class with their HP and Attack dice used
+        name = opening_story
+        enemy = Enemy.new(60, "1d8", name) #created enemy class with its hp and attack dice used
+        battle = ""
+        while battle != "Run!"
+            battle = battle_menu
+            case battle
+            when "Attack"
+                puts "Attack"
+            when "Run!"
+                puts "run away"
+                press_continue
+                next
+            end
+        end
     when "Help"
         help_text
         press_continue

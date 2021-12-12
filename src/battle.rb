@@ -31,6 +31,7 @@ def opening_story
     page_break
 
     puts "Leeroy's eyes squint as he sizes up the lizard, he can just make out that the lizard is wearing a collar with the word #{name}. His eyes narrow as #{name} slowly turns to stare back at Leeroy, Leeroy lets out a warning growl as he takes a step forward. #{name} the lizard takes a challenging step forward, not wanting to give up his sunbaking spot."
+    return name 
 end
 
 
@@ -38,10 +39,4 @@ end
 
 
 
-#page_break
-#battle_story
-#page_break
-#battle_menu
-
-#opening_story
 
