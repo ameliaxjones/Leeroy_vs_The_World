@@ -11,6 +11,7 @@ def battle_menu
     prompt = TTY::Prompt.new
     prompt.select("Which will you choose?") do |menu|
         menu.choice "Attack"
+        menu.choice "Special Attack!!"
         menu.choice "Run!"
     end
 end

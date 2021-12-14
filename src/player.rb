@@ -13,6 +13,11 @@ class Player
         return dice.roll
     end
 
+    def special_attack
+        dice = GamesDice.create @dice
+        return dice.roll + dice.roll 
+    end
+
     def take_damage(i)
         @hp -= i
     end

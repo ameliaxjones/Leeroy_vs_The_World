@@ -38,10 +38,11 @@ while answer != "Exit"
     system "clear"
     case answer
     when "New Game!"
-        player = Player.new(25, "1d10") #created player class with their HP and Attack dice used
+        player = Player.new(30, "1d10") #created player class with their HP and Attack dice used
         name = opening_story
         enemy = Enemy.new(30, "1d8", name) #created enemy class with its hp and attack dice used
         battle = ""
+        special = ""
         while battle != "Run!"
             battle = battle_menu
             case battle
@@ -50,6 +51,33 @@ while answer != "Exit"
                 enemy.take_damage(damage)
                 if enemy.hp > 0
                     puts "#{enemy.name} has taken #{damage} damage they have #{enemy.hp} hp left"
+                else
+                     victory_story(enemy.name)
+                     press_continue
+                     battle = "Run!"
+                end
+                damage = enemy.attack
+                player.take_damage(damage)
+                if player.hp > 0
+                    page_break
+                    sleep(2)
+                    puts "You take #{damage} damage, you now have #{player.hp} hp left"
+                else
+                    fail_story(enemy.name)
+                    press_continue
+                    battle = "Run!"
+                end
+            when "Special Attack!!"
+                damage = player.special_attack 
+                enemy.take_damage(damage)
+                if special == "selected"
+                    page_break
+                    puts "You have already used your special, select another option".upcase
+                elsif enemy.hp > 0 && special != "selected"
+                    page_break
+                    puts "#{enemy.name} has taken #{damage} special damage they have #{enemy.hp} hp left"
+                    puts "#{enemy.name} is now stunned"
+                    special = "selected"
                 else
                      victory_story(enemy.name)
                      press_continue
