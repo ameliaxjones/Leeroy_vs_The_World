@@ -48,7 +48,8 @@ while answer != "Exit"
             when "Attack"
                 puts "Attack"
             when "Run!"
-                puts "run away"
+                puts "Leeroy hears his name being called and uses that as an excuse to run away. "
+                page_break
                 press_continue
                 next
             end
@@ -57,6 +58,7 @@ while answer != "Exit"
         help_text
         press_continue
     else
+        page_break
         puts "GoodBye! ૮ ˆﻌˆ ა "
         page_break
         next
