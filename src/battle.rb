@@ -34,17 +34,24 @@ def opening_story
     return name 
 end
 
+#text if player hp is 0
 def fail_story
     name = opening_story
     puts "Leeroy all bruised up from the beating he had from #{name}  limps back into the safety of his home vowing next time he saw him he would get his revenge. "
 
 end
 
+#text is enemy hp is 0
 def Victory story
     name = opening_story
     puts "Leeroy barked victoriously as #{name} the lizard scuttled away from the fight. That will teach him to come onto his turf!"
     
 end
 
+#text for when enemy attacks
+def enemy_attack
+    name = opening_story
+    Puts " #{name}" has attacked you
+end
 
 

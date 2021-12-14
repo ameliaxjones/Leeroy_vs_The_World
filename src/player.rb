@@ -13,11 +13,6 @@ class Player
         return dice.roll
     end
 
-    def run
-        puts "Leeroy hears his name being called and uses that as an excuse to run away."
-        return true
-    end
-
     def take_damage(i)
         @hp -= i
     end

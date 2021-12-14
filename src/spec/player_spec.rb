@@ -22,3 +22,4 @@ RSpec.describe Enemy, "Testing dice" do
         expect(enemy.hp).to be < 100 
     end
 end
+
