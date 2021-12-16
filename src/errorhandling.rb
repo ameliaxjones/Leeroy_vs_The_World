@@ -1,4 +1,6 @@
 require_relative './battle'
+require 'tty-prompt'
+require 'tty-font'
 
 class MyErrors < StandardError
 
@@ -10,6 +12,8 @@ class MyErrors < StandardError
             username = gets.chomp.upcase
         end
         puts `clear`
-        puts" Welcome #{username} to ..."
+        font = TTY::Font.new(:straight)
+        pastel = Pastel.new
+        puts pastel.red(font.write("Welcome   #{username.capitalize}      to  ..."))
     end
 end

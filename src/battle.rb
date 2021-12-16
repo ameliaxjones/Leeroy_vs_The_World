@@ -24,6 +24,7 @@ end
 def page_break
     puts ""
 end
+  
 
 
 # Body of text for story
@@ -33,9 +34,13 @@ def opening_story
 
     pastel = Pastel.new
     puts pastel.red("What is your archnemesis name?")
+    #If user doesnt enter name a random name from below will be used
     name = gets.chomp.to_s.upcase
-    #if name == ""
-    #raise MyErrors
+    if name == ""
+        puts name = ['Matt Damon', 'Ben Afflec', 'Bono', 'Ru Paul'].sample
+        page_break
+    end
+   
     
     puts "Leeroy's eyes squint as he sizes up the lizard, he can just make out that the lizard is wearing a collar with the word #{name}. His eyes narrow as #{name} slowly turns to stare back at Leeroy, Leeroy lets out a warning growl as he takes a step forward. #{name} the lizard takes a challenging step forward, not wanting to give up his sunbaking spot."
     return name 
