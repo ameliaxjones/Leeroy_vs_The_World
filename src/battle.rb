@@ -1,4 +1,6 @@
+require_relative './errorhandling'
 
+#gems
 require "tty-prompt"
 require 'games_dice'
 require 'pastel'
@@ -18,15 +20,6 @@ end
 
 
 
-#error handling for empty string
-#def empty_name_string(empty_name_string)
-#    name = name.strip 
-#    raise ArgumentError, "Archnemises name can not be empty" if name.empty?
-#   name
-#end
-
-
-
 #method for page breaks to make blocks of text look neat
 def page_break
     puts ""
@@ -41,8 +34,9 @@ def opening_story
     pastel = Pastel.new
     puts pastel.red("What is your archnemesis name?")
     name = gets.chomp.to_s.upcase
-    page_break
-
+    #if name == ""
+    #raise MyErrors
+    
     puts "Leeroy's eyes squint as he sizes up the lizard, he can just make out that the lizard is wearing a collar with the word #{name}. His eyes narrow as #{name} slowly turns to stare back at Leeroy, Leeroy lets out a warning growl as he takes a step forward. #{name} the lizard takes a challenging step forward, not wanting to give up his sunbaking spot."
     return name 
 end
@@ -55,8 +49,13 @@ end
 
 #text is enemy hp is 0
 def victory_story(name)
-  
+    page_break
     puts "Leeroy barked victoriously as #{name} the lizard scuttled away from the fight. That will teach him to come onto his turf!"
+    puts "Off in the distance Leeroy could hear paper’s rustling was that the mailman?"
+
+    page_break
+    pastel = Pastel.new
+    puts pastel.red("To Be Continued")
     
 end
 
@@ -64,5 +63,3 @@ end
 def enemy_attack(name)
     Puts "#{name} has attacked you"
 end
-
-

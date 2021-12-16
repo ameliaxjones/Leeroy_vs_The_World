@@ -27,8 +27,11 @@ def press_continue
 end                                                                                                                        
 
 
+
 #Title
+page_break
 puts pastel.red(font.write("Leeroy    vs   The   World!"))
+page_break
 
 
 #Loop for the main menu, battle menu, attack, and run.
@@ -50,7 +53,7 @@ while answer != "Exit"
                 damage = player.attack 
                 enemy.take_damage(damage)
                 if enemy.hp > 0
-                    puts "#{enemy.name} has taken #{damage} damage they have #{enemy.hp} hp left"
+                    puts "#{enemy.name.upcase} has taken #{damage} damage they have #{enemy.hp} hp left"
                 else
                      victory_story(enemy.name)
                      press_continue
