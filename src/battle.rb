@@ -16,10 +16,22 @@ def battle_menu
     end
 end
 
+
+
+#error handling for empty string
+#def empty_name_string(empty_name_string)
+#    name = name.strip 
+#    raise ArgumentError, "Archnemises name can not be empty" if name.empty?
+#   name
+#end
+
+
+
 #method for page breaks to make blocks of text look neat
 def page_break
     puts ""
 end
+
 
 # Body of text for story
 def opening_story

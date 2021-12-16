@@ -31,7 +31,7 @@ end
 puts pastel.red(font.write("Leeroy    vs   The   World!"))
 
 
-#Loop for the main menu 
+#Loop for the main menu, battle menu, attack, and run.
 answer = ""
 while answer != "Exit"
     answer = main_menu
@@ -60,7 +60,7 @@ while answer != "Exit"
                 player.take_damage(damage)
                 if player.hp > 0
                     page_break
-                    sleep(2)
+                    sleep(1)
                     puts "You take #{damage} damage, you now have #{player.hp} hp left"
                 else
                     fail_story(enemy.name)
