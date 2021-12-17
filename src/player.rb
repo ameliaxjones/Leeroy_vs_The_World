@@ -13,11 +13,13 @@ class Player
         return dice.roll
     end
 
+    #this has been tested in player_spec.rb
     def special_attack
         dice = GamesDice.create @dice
         return dice.roll + dice.roll 
     end
 
+    #this has been tested in player_spec.rb
     def take_damage(i)
         @hp -= i
     end

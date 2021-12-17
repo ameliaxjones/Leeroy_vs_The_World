@@ -37,7 +37,7 @@ def opening_story
     #If user doesnt enter name a random name from below will be used
     name = gets.chomp.to_s.upcase
     if name == ""
-        puts name = ['Matt Damon', 'Ben Afflec', 'Bono', 'Ru Paul'].sample
+        puts name = ['Matt Damon', 'Ben Affleck', 'Bono', 'Ru Paul'].sample #found on ruby guides
         page_break
     end
    
@@ -48,6 +48,7 @@ end
 
 #text if player hp is 0
 def fail_story(name)
+    page_break
     puts "Leeroy all bruised up from the beating he had from #{name}  limps back into the safety of his home vowing next time he saw him he would get his revenge. "
 
 end

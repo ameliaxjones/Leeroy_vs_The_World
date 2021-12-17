@@ -43,6 +43,7 @@ while answer != "Exit"
     when "New Game!"
         player = Player.new(30, "1d10") #created player class with their HP and Attack dice used
         name = opening_story
+        #this has been tested in player_spec.rb
         enemy = Enemy.new(30, "1d8", name) #created enemy class with its hp and attack dice used
         battle = ""
         special = ""
