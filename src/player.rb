@@ -8,12 +8,12 @@ class Player
         @dice = dice
     end
 
+     #this has been tested in player_spec.rb
     def attack
         dice = GamesDice.create @dice
         return dice.roll
     end
 
-    #this has been tested in player_spec.rb
     def special_attack
         dice = GamesDice.create @dice
         return dice.roll + dice.roll 

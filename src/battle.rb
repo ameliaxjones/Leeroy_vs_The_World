@@ -36,8 +36,12 @@ def opening_story
     puts pastel.red("What is your archnemesis name?")
     #If user doesnt enter name a random name from below will be used
     name = gets.chomp.to_s.upcase
-    if name == ""
-        puts name = ['Matt Damon', 'Ben Affleck', 'Bono', 'Ru Paul'].sample #found on ruby guides
+    #error handlingn for no name and numbers 
+    if name == "" || name.count("0-9") > 0
+        puts "Invalid input, assigning random name"
+        sleep(1)
+        #would change these names if ever published to avoid copyright
+        puts name = ['Matt Damon', 'Ben Affleck', 'Bono', 'Ru Paul'].sample 
         page_break
     end
    
