@@ -20,7 +20,7 @@ def main_menu
     end
 end
 
-                                                                                                     
+#continue button
 def press_continue                                                                                                              
   print "Select any key to continue ..."                                                                                                    
   STDIN.getch   #recomended from stack overflow instead of using gets                                                                                                                                                                                                      
